@@ -7,9 +7,12 @@ from array_class import ArrayClass
 
 
 class ArrayClassTestCase(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.original_value = [10, 3, 8, 2, 8, 17]
+
     def setUp(self):
-        original_value = [10, 3, 8, 2, 8, 17]
-        self.array = ArrayClass(original_value)
+        self.array = ArrayClass(self.original_value)
 
     def test___init__(self):
         """
@@ -63,7 +66,7 @@ class ArrayClassTestCase(unittest.TestCase):
 
     def test_order(self):
         """
-        ArrayClass.order should sort the array property reverse
+        ArrayClass.order should sort the array attribute reverse
         """
         expected_value = [17, 10, 8, 8, 3, 2]
 
