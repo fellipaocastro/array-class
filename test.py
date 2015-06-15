@@ -26,7 +26,7 @@ class ArrayClassTestCase(unittest.TestCase):
         array_object = ArrayClass(self.original_array)
         expected_array = [8, 17, 10, 3, 2]
 
-        array_object.eliminate_duplicate()    
+        array_object.eliminate_duplicate()
 
         self.assertEqual(array_object.array, expected_array)
 
@@ -38,7 +38,7 @@ class ArrayClassTestCase(unittest.TestCase):
         element = 6
         expected_array = [10, 3, 8, 2, 8, 17, element]
 
-        array_object.add(element)    
+        array_object.add(element)
 
         self.assertEqual(array_object.array, expected_array)
 
