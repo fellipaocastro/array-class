@@ -3,7 +3,7 @@
 
 class ArrayClass(object):
     def __init__(self, array):
-        self.array = array
+        self.array = list(array)
 
     def eliminate_duplicate(self):
         self.array = list(set(self.array))
