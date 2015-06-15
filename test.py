@@ -71,6 +71,5 @@ class ArrayClassTestCase(unittest.TestCase):
 
         self.assertEqual(self.array_object.array, expected_array)
 
-
 if __name__ == '__main__':
     unittest.main()
