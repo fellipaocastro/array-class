@@ -59,12 +59,11 @@ class ArrayClassTestCase(unittest.TestCase):
         ArrayClass.rank should return None when the given element is not in the array property
         """
         array_object = ArrayClass(self.original_array)
-        element = 8
-        expected_index = 3
+        element = 9
 
         index = array_object.rank(element)
 
-        self.assertEqual(index, expected_index)
+        self.assertIsNone(index)
 
     def test_order(self):
         """
