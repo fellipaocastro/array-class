@@ -13,7 +13,7 @@ class ArrayClassTestCase(unittest.TestCase):
 
     def test___init__(self):
         """
-        ArrayClass.__init__ should set the array attribute
+        ArrayClass.__init__ should set the value attribute
         """
         expected_value = [10, 3, 8, 2, 8, 17]
 
@@ -21,7 +21,7 @@ class ArrayClassTestCase(unittest.TestCase):
 
     def test_eliminate_duplicate(self):
         """
-        ArrayClass.eliminate_duplicate should set the array attribute without duplicate elements
+        ArrayClass.eliminate_duplicate should set the value attribute without duplicate elements
         """
         expected_value = [8, 17, 10, 3, 2]
 
@@ -31,7 +31,7 @@ class ArrayClassTestCase(unittest.TestCase):
 
     def test_add(self):
         """
-        ArrayClass.add should add an element to the array attribute
+        ArrayClass.add should add an element to the value attribute
         """
         element = 6
         expected_value = [10, 3, 8, 2, 8, 17, element]
@@ -53,7 +53,7 @@ class ArrayClassTestCase(unittest.TestCase):
 
     def test_rank_2(self):
         """
-        ArrayClass.rank should return None when the given element is not in the array property
+        ArrayClass.rank should return None when the given element is not in the array attribute
         """
         element = 9
 
