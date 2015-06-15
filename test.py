@@ -9,6 +9,7 @@ from array_class import ArrayClass
 class ArrayClassTestCase(unittest.TestCase):
     def setUp(self):
         original_array = [10, 3, 8, 2, 8, 17]
+
         self.array_object = ArrayClass(original_array)
 
     def test___init__(self):
