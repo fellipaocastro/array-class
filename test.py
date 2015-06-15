@@ -8,37 +8,37 @@ from array_class import ArrayClass
 
 class ArrayClassTestCase(unittest.TestCase):
     def setUp(self):
-        original_array = [10, 3, 8, 2, 8, 17]
-        self.array_object = ArrayClass(original_array)
+        original_value = [10, 3, 8, 2, 8, 17]
+        self.array = ArrayClass(original_value)
 
     def test___init__(self):
         """
         ArrayClass.__init__ should set the array attribute
         """
-        expected_array = [10, 3, 8, 2, 8, 17]
+        expected_value = [10, 3, 8, 2, 8, 17]
 
-        self.assertEqual(self.array_object.array, expected_array)
+        self.assertEqual(self.array.value, expected_value)
 
     def test_eliminate_duplicate(self):
         """
         ArrayClass.eliminate_duplicate should set the array attribute without duplicate elements
         """
-        expected_array = [8, 17, 10, 3, 2]
+        expected_value = [8, 17, 10, 3, 2]
 
-        self.array_object.eliminate_duplicate()
+        self.array.eliminate_duplicate()
 
-        self.assertEqual(self.array_object.array, expected_array)
+        self.assertEqual(self.array.value, expected_value)
 
     def test_add(self):
         """
         ArrayClass.add should add an element to the array attribute
         """
         element = 6
-        expected_array = [10, 3, 8, 2, 8, 17, element]
+        expected_value = [10, 3, 8, 2, 8, 17, element]
 
-        self.array_object.add(element)
+        self.array.add(element)
 
-        self.assertEqual(self.array_object.array, expected_array)
+        self.assertEqual(self.array.value, expected_value)
 
     def test_rank_1(self):
         """
@@ -47,7 +47,7 @@ class ArrayClassTestCase(unittest.TestCase):
         element = 8
         expected_index = 3
 
-        index = self.array_object.rank(element)
+        index = self.array.rank(element)
 
         self.assertEqual(index, expected_index)
 
@@ -57,7 +57,7 @@ class ArrayClassTestCase(unittest.TestCase):
         """
         element = 9
 
-        index = self.array_object.rank(element)
+        index = self.array.rank(element)
 
         self.assertIsNone(index)
 
@@ -65,11 +65,11 @@ class ArrayClassTestCase(unittest.TestCase):
         """
         ArrayClass.order should sort the array property reverse
         """
-        expected_array = [17, 10, 8, 8, 3, 2]
+        expected_value = [17, 10, 8, 8, 3, 2]
 
-        self.array_object.order()
+        self.array.order()
 
-        self.assertEqual(self.array_object.array, expected_array)
+        self.assertEqual(self.array.value, expected_value)
 
 if __name__ == '__main__':
     unittest.main()

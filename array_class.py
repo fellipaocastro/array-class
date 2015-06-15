@@ -2,18 +2,18 @@
 
 
 class ArrayClass(object):
-    def __init__(self, array):
-        self.array = list(array)
+    def __init__(self, value):
+        self.value = list(value)
 
     def eliminate_duplicate(self):
-        self.array = list(set(self.array))
+        self.value = list(set(self.value))
 
     def add(self, element):
-        self.array.append(element)
+        self.value.append(element)
 
     def rank(self, element):
-        if element in self.array:
-            return self.array.index(element) + 1
+        if element in self.value:
+            return self.value.index(element) + 1
 
     def order(self):
-        self.array = sorted(self.array, reverse=True)
+        self.value = sorted(self.value, reverse=True)
