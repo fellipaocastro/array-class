@@ -12,6 +12,8 @@ class ArrayClass(object):
         self.value.append(element)
 
     def rank(self, element):
+        self.order()
+
         if element in self.value:
             return self.value.index(element) + 1
 
