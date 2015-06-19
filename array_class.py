@@ -12,6 +12,7 @@ class ArrayClass(object):
         self.value.append(element)
 
     def rank(self, element):
+        self.eliminate_duplicate()
         self.order()
 
         if element in self.value:
