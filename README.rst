@@ -1,4 +1,4 @@
-array_class
+array-class
 ===========
 
 Array Class
